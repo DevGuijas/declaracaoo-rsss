@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,48 +8,113 @@
     <title>Feliz 1 ano e 4 meses!!!</title>
     <link rel="stylesheet" href="./global.css">
 </head>
+
 <body>
-    
-    <div class="container">
-        <div class="envelope-wrapper">
-            <div class="envelope">
-                <div class="letter">
-                    <div class="text">
-                        <strong>Olá, minha loirinha dos olhinhos de brumel!</strong>
-                        <p>
-                            Criei essa cartinnha para dizer o quanto eu te amo.
-                            Obrigado por existir e ser a pessoa mais incrível desse mundo!
-                            Espero que a gente possa ficar bem logo. Eu te amo! :( 
+
+    <div class="body">
+        <div class="container">
+            <div class="envelope-wrapper">
+                <div class="envelope">
+                    <div class="letter">
+                        <div class="text">
+                            <strong>Olá, minha loirinha dos olhinhos de brumel!</strong>
+                            <p>
+                                Criei essa cartinnha para dizer o quanto eu te amo.
+                                Obrigado por existir e ser a pessoa mais incrível desse mundo!
+                                Espero que a gente possa ficar bem logo. Eu te amo! :(
                             <P style="text-align: center;">FELIZ NOSSOS 1 ANO E 4 </P>
                             <P style="text-align: center;">MESES!!!!</P>
-                        </p>
+                            </p>
+                        </div>
                     </div>
                 </div>
+                <div class="heart"></div>
             </div>
-            <div class="heart"></div>
         </div>
+
+        <audio id="music-player" src="./source/you_are_the_right_one.mp3"></audio>
+        <script>
+            const envelope = document.querySelector('.envelope-wrapper');
+            const heart = document.querySelector('.heart');
+            const audio = document.getElementById('music-player');
+
+            // Adiciona evento de clique na envelope-wrapper
+            envelope.addEventListener('click', () => {
+                envelope.classList.toggle('flap');
+            });
+
+            // Adiciona evento de clique no coração
+            heart.addEventListener('click', () => {
+                if (audio.paused) {
+                    audio.play(); // Toca a música
+                } else {
+                    audio.currentTime = 0; // Reinicia a música caso esteja tocando
+                    audio.play();
+                }
+            });
+        </script>
     </div>
 
-    <audio id="music-player" src="./source/you_are_the_right_one.mp3"></audio>
-    <script>
-        const envelope = document.querySelector('.envelope-wrapper');
-        const heart = document.querySelector('.heart');
-        const audio = document.getElementById('music-player');
+    <h1>Acompanhe a letra:</h1>
+    <p>
+        <strong>Você É a Pessoa Certa</strong><br>
+        <em>You Are The Right One</em><br><br>
 
-        // Adiciona evento de clique na envelope-wrapper
-        envelope.addEventListener('click', () => {
-            envelope.classList.toggle('flap');
-        });
+        Você era o caminho certo<br>
+        <em>You were the right way</em><br><br>
 
-        // Adiciona evento de clique no coração
-        heart.addEventListener('click', () => {
-            if (audio.paused) {
-                audio.play(); // Toca a música
-            } else {
-                audio.currentTime = 0; // Reinicia a música caso esteja tocando
-                audio.play();
-            }
-        });
-    </script>
+        Eu só estava esperando você olhar para mim<br>
+        <em>I was just waiting for you to look at me</em><br><br>
+
+        É uma hora ruim?<br>
+        <em>Is there a wrong time?</em><br><br>
+
+        Amor, estou adivinhando<br>
+        <em>Baby, I'm guessing</em><br><br>
+
+        Apenas me deixe saber<br>
+        <em>Just let me know</em><br><br>
+
+        Bom, já faz um bom tempo<br>
+        <em>Well, it's been a long time</em><br><br>
+
+        Desde que você esteve solitário<br>
+        <em>Since you've been lonely</em><br><br>
+
+        Então, o que vou fazer?<br>
+        <em>So what will I do?</em><br><br>
+
+        Você é a pessoa certa<br>
+        <em>You are the right one</em><br><br>
+
+        E eu sou apenas o garoto que está olhando pra você<br>
+        <em>And I'm just the boy who is looking at you</em><br><br>
+
+        Quem sabe da próxima vez, em um bar<br>
+        <em>Peut-être une prochaine fois, au détour d'un bar</em><br><br>
+
+        Então, o que eu vou fazer?<br>
+        <em>So what will I do?</em><br><br>
+
+        Com quatro gramas no sangue<br>
+        <em>Avec quatre grammes dans l'sang</em><br><br>
+
+        Até mais gente, boa noite<br>
+        <em>À plus mec, bonne soirée</em><br><br>
+
+        Então, o que eu vou fazer?<br>
+        <em>So what will I do?</em><br><br>
+
+        Eu tentei o caminho errado<br>
+        <em>I tried the wrong way</em><br><br>
+
+        Eu apenas tentei adivinhar, esperando meu tempo<br>
+        <em>I was just guessing, biding my time</em><br><br>
+
+        Você é o único que eu consigo imaginar ao meu lado<br>
+        <em>You are the only one I can picture by my side</em>
+    </p>
+
 </body>
+
 </html>
